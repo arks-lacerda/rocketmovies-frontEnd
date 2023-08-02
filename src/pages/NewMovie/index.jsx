@@ -46,6 +46,16 @@ export function NewMovie() {
       return alert('To create the note you must add the tag or leave the field empty.')
     }
 
+    if (!description) {
+      const confirmMovie = confirm(
+        'Tem certeza que deseja adicionar esse filme sem nenhuma descrição?'
+      );
+
+      if (!confirmMovie) {
+        return;
+      }
+    }
+
     await api.post('/notes', {
       title,
       description,
