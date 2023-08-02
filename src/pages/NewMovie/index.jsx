@@ -125,7 +125,7 @@ export function NewMovie() {
 
           <div className='btns'>
             <Button title='Clear' onClick={handleClear} />
-            <Button title='Save changes' onClick={handleNewNote} />
+            <Button to="/" title='Save changes' onClick={handleNewNote} />
           </div>
         </main>
       </Form>
